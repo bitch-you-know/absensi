@@ -1,0 +1,19 @@
+.login {
+   background-image: url(../assets/bgLogin.jpg);
+   background-size: cover;
+   filter: brightness(0.9);
+   background-position: center;
+}
+.structure {
+   
+    background-color: rgba(0, 0, 0, 0.397);
+   box-shadow: 0px 0px 30px rgb(133, 132, 132) ;
+   
+}
+.structure h1 {
+    font-size: 4rem;
+}
+.intput-card {
+    width: 30rem;
+   
+}
