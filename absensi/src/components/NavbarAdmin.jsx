@@ -14,8 +14,9 @@ const NavbarAdmin = () => {
                 <Row className="d-flex ">
                     <Col className="text-center ">
                        <div className='bg-white'><Link to={"/pengajuan-cuti"} className='text-decoration-none text-black'><h4>Dashboard Over Veew</h4></Link></div>
-                       <div className='bg-white'><h4>Daftar Karyawan</h4></div>
-                       <div className='bg-white'><h4>Pengajuan Cuti</h4></div>
+                       <div className='bg-white'><Link to={"/daftar-karyawan"} className='text-decoration-none text-black'><h4>Daftar karyawan</h4></Link></div>
+                       <div className='bg-white'><Link to={"/pengajuan-cuti"} className='text-decoration-none text-black'><h4>pengajuan cuti</h4></Link></div>
+                      
                        
                     </Col>
                 </Row>
