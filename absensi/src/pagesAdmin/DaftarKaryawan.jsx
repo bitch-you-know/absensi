@@ -46,7 +46,7 @@ const DaftarKaryawan = () => {
             ...data,
             id: editeDataById, // Menggunakan ID yang benar
         };
-    
+
         try {
             await axsiosInstance.put(`users/${editeDataById}`, modifiedData, {
                 headers: { Authorization: `Bearer ${token}` },
@@ -57,7 +57,7 @@ const DaftarKaryawan = () => {
             console.log(error);
         }
     }
-    
+
     //OPEN MODAL
     const openModalEdite = (karyawan) => {
         setEditeModal(true);
@@ -124,6 +124,11 @@ const DaftarKaryawan = () => {
                             </Table>
                         </CardBody>
                     </Card>
+
+
+                    {/* <============( MODAL UNTUK EDITE )=============> */}
+
+
                     <Modal show={editeModal} onHide={handleClose}>
                         <Modal.Header closeButton>
                             <Modal.Title>Edit Data Karyawan</Modal.Title>
