@@ -58,6 +58,18 @@ const DaftarKaryawan = () => {
         }
     }
 
+    //DELETE DATA KAYAWAN
+    const deleteEmploye=async(id)=>{
+        try {
+            const result = await axsiosInstance.delete(`users/${id}`,{
+                headers : { Authorization: `Bearer ${token}`}
+            })
+            getEmploye() //update data 
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     //OPEN MODAL
     const openModalEdite = (karyawan) => {
         setEditeModal(true);
@@ -113,7 +125,7 @@ const DaftarKaryawan = () => {
                                             <td>
                                                 <Button className="me-2" size="sm">Detail</Button>
                                                 <Button onClick={() => openModalEdite(karyawan)} className="me-2" variant="secondary" size="sm">Edite</Button>
-                                                <Button className="me-2" variant="danger" size="sm">Delete</Button>
+                                                <Button onClick={()=> deleteEmploye(karyawan.id)} className="me-2" variant="danger" size="sm">Delete</Button>
 
                                             </td>
 

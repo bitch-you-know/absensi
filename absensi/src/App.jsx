@@ -6,6 +6,8 @@ import {Routes,Route}from "react-router-dom"
 import Dashboard from './pagesAdmin/dashboard'
 import DaftarKaryawan from './pagesAdmin/DaftarKaryawan'
 import PengajuanCuti from './pagesAdmin/PengajuanCuti'
+import HomePage from './pagesUser/HomePage'
+import Calendarku from './pagesUser/CalendarKu'
 
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
     <Route element={<Dashboard/>} path='/dashboard'/>
     <Route element={<DaftarKaryawan/>} path='/daftar-karyawan' />
     <Route element={<PengajuanCuti/>} path='/pengajuan-cuti' />
+    <Route element={<HomePage/>} path='/home-page' /> 
+    <Route element={<Calendarku/>} path='/calendarku' /> 
    </Routes>
   )
 }
